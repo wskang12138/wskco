@@ -1,0 +1,29 @@
+.wsk-list,
+.wsk-dark-list {
+  border: 1px solid rgb(229, 230, 235);
+
+  .victurl-list-content {
+    position: relative;
+    overflow-y: auto;
+
+    .victurl-relly-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.wsk-dark-list {
+  color: #8e8e8e;
+  border: 1px solid #484849;
+
+  .list-header {
+    color: #c6c6c6;
+  }
+
+  .wsk-list-item {
+    border-top: 1px solid #484849;
+  }
+}

@@ -1,0 +1,188 @@
+@import "../../styles/variables";
+.wskco-number-count-3d {
+  background: #000;
+  padding-top: 3vw;
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+    text-align: center;
+    z-index: 999;
+  }
+
+  &__rotate {
+    animation: wskco-rotateReverse $animTime infinite linear;
+  }
+
+  &__number-rotate {
+    transform: rotateX(10deg) rotateZ(0);
+    animation: wskco-rotate $animTime infinite linear;
+  }
+
+  &__preserve {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  &__number {
+    position: relative;
+    width: $width;
+    height: $screenTop;
+    display: inline-block;
+    margin: $numberMargin $numberMargin 0 0;
+
+    &-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $width;
+      height: 2px;
+      background: $normalColor;
+
+      &:nth-child(1) {
+        transform: translateY($dis);
+      }
+
+      &:nth-child(2) {
+        top: $secTop;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(180deg) translateY($dis);
+        top: $thirdTop;
+      }
+
+      &:nth-child(4) {
+        transform: rotate(90deg) translateY(-$dis);
+        transform-origin: 0 center;
+      }
+
+      &:nth-child(5) {
+        transform: rotate(-90deg) translateY(-$dis);
+        transform-origin: 100% center;
+      }
+
+      &:nth-child(6) {
+        top: $secLineTop;
+        transform: rotate(90deg) translateY(-$dis);
+        transform-origin: 0 center;
+      }
+
+      &:nth-child(7) {
+        top: $secLineTop;
+        transform: rotate(-90deg) translateY(-$dis);
+        transform-origin: 100% center;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: $lightColor;
+        box-shadow: $lightShadow;
+      }
+
+      &::before {
+        left: 0;
+        right: 50%;
+        transition: all 0.5s ease-in;
+      }
+
+      &::after {
+        left: 50%;
+        right: 0;
+        transition: all 0.5s ease-out;
+      }
+
+      &--translate {
+        &::before,
+        &::after {
+          transform: translateZ($transformDistance);
+        }
+      }
+    }
+
+    &[data-digit='1'] &-line:nth-child(1),
+    &[data-digit='1'] &-line:nth-child(2),
+    &[data-digit='1'] &-line:nth-child(3),
+    &[data-digit='1'] &-line:nth-child(4),
+    &[data-digit='1'] &-line:nth-child(6),
+    &[data-digit='2'] &-line:nth-child(4),
+    &[data-digit='2'] &-line:nth-child(7),
+    &[data-digit='3'] &-line:nth-child(4),
+    &[data-digit='3'] &-line:nth-child(6),
+    &[data-digit='4'] &-line:nth-child(1),
+    &[data-digit='4'] &-line:nth-child(3),
+    &[data-digit='4'] &-line:nth-child(6),
+    &[data-digit='5'] &-line:nth-child(5),
+    &[data-digit='5'] &-line:nth-child(6),
+    &[data-digit='6'] &-line:nth-child(5),
+    &[data-digit='7'] &-line:nth-child(2),
+    &[data-digit='7'] &-line:nth-child(3),
+    &[data-digit='7'] &-line:nth-child(4),
+    &[data-digit='7'] &-line:nth-child(6),
+    &[data-digit='9'] &-line:nth-child(6),
+    &[data-digit='0'] &-line:nth-child(2) {
+      &::before,
+      &::after {
+        transform: translateZ(25px);
+        background: $drakColor;
+        box-shadow: $drakShadow;
+      }
+    }
+  }
+
+  &__comma {
+    position: relative;
+    top: -$thirdTop + 1vw;
+    display: inline-block;
+    width: 1vw;
+    height: 1vw;
+    background: $normalColor;
+    margin: $numberMargin $numberMargin 0 -0.8vw;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $lightColor;
+      transform: translateZ($transformDistance);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.8vw;
+      right: 0.3vw;
+      border: 0.2vw solid transparent;
+      border-top: 0.9vw solid $lightColor;
+      transform: translateZ($transformDistance) rotate(40deg);
+    }
+  }
+}
+
+@keyframes wskco-rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(10deg) rotateY(20deg) rotateZ(180deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
+  }
+}
+
+@keyframes wskco-rotateReverse {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}

@@ -1,0 +1,127 @@
+.menu {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  .menu-options {
+    overflow: hidden;
+    font-size: $font-size-base;
+    line-height: $menu-item-height;
+    cursor: pointer;
+    transition: 0.2s linear;
+  }
+
+  .menu-fatherTitle,
+  .menu-activeFatherTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $menu-item-height;
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .left {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0 $menu-item-padding-x;
+
+      i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: calc($menu-item-padding-x /2);
+      }
+    }
+  }
+
+  .menu-activeMenuOptions,
+  .menu-childMenuOptions {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: $font-size-base;
+    line-height: $menu-item-height;
+    cursor: pointer;
+    transition: 0.2s linear;
+    background-color: $gray-100;
+  }
+
+  .menu-icon {
+    min-width: 32px;
+    text-indent: 0;
+    font-size: $font-size-base;
+    padding-right: $menu-item-padding-x;
+  }
+
+  .menu-label {
+    flex: 1;
+  }
+}
+
+.menu-atuo,
+.menu-light {
+  color: $menu-item-color;
+  background-color: $menu-item-bg;
+  box-shadow: $menu-box-shadow;
+
+  .menu-fatherTitle,
+  .menu-activeFatherTitle {
+    &:hover {
+      color: $menu-item-active-color;
+    }
+  }
+
+  .menu-activeFatherTitle {
+    color: $menu-item-active-color;
+  }
+
+  .menu-activeMenuOptions {
+    color: $menu-item-active-color;
+    background-color: $menu-item-bg-active;
+
+    :after {
+      width: $menu-item-active-border-width;
+      height: $menu-item-height;
+      background-color: $menu-item-border-bg-active;
+      content: '';
+    }
+  }
+}
+
+.menu-dark {
+  color: $menu-dark-item-color;
+  box-shadow: $menu-box-shadow;
+  background-color: $menu-dark-item-bg;
+
+  .menu-childMenuOptions {
+    background-color: $gray-900;
+  }
+
+  .menu-fatherTitle,
+  .menu-activeFatherTitle {
+    &:hover {
+      color: $menu-dark-item-active-color;
+    }
+  }
+
+  .active {
+    background-color: $menu-dark-item-bg-active;
+    color: $menu-dark-item-color;
+
+    .menu-fatherTitle {
+      &:hover {
+        color: $menu-dark-item-color;
+      }
+    }
+  }
+
+  .menu-activeFatherTitle {
+    color: $menu-dark-item-active-color;
+  }
+}

@@ -1,0 +1,15 @@
+.wskco-demo {
+  &__outline-animaiton {
+    transition: color 1s;
+    cursor: pointer;
+
+    &:hover {
+      color: deeppink;
+
+      .wskco-outline-animation__shape {
+        transition: all 1s;
+        stroke: deeppink !important;
+      }
+    }
+  }
+}

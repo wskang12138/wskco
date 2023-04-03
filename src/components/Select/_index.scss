@@ -1,0 +1,148 @@
+.select,
+.dark-select {
+  position: relative;
+  width: $select-width;
+  height: $height-base;
+  font-size: $font-size-base;
+  text-align: center;
+  border: $select-border-color solid $select-border-width;
+  cursor: pointer;
+  transition: $select-transition;
+  user-select: none;
+  border-radius: $border-radius-sm;
+
+  .disabled-selected {
+    color: $disabled-selected-color;
+  }
+
+  .selected {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $translate-ms;
+    background: $white;
+
+    input {
+      padding-left: 0;
+    }
+
+    .size {
+      margin-right: $translate-xs;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: left;
+    }
+
+    .placeholder {
+      margin-right: $translate-xs;
+      color: $gray-400;
+    }
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  &:hover {
+    border-color: $primary;
+  }
+
+  input {
+    border: none;
+    outline: none;
+  }
+
+  .selectOptions {
+    position: absolute;
+    top: 35px;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    width: $select-width;
+    overflow: hidden;
+    background-color: $select-background-color;
+    box-shadow: $select-box-shadow;
+    transition: $select-transition;
+    z-index: 9999;
+
+    .option {
+      padding: $translate-xs $translate-ms;
+      font-size: $font-size-base;
+      text-align: left;
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: $select-option-color;
+
+      &:hover:not(.disabled-option) {
+        color: $primary;
+      }
+    }
+
+    .disabled-option {
+      color: $disabled-selected-color;
+    }
+
+    .select-option {
+      padding: $translate-xs $translate-ms;
+      font-size: $font-size-base;
+      text-align: left;
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background-color: $select-selected-background-color;
+      color: $select-selected-color;
+    }
+  }
+}
+
+.dark-select {
+
+  .selected,
+  .selectOptions,
+  .option {
+    color: $select-dark-color;
+    background: $select-dark-background-color !important;
+  }
+
+  .selectOptions {
+    .disabled-option {
+      color: $select-dark-color;
+    }
+  }
+
+  .disabled-selected {
+    color: $select-dark-color;
+  }
+}
+
+.selectOption-enter,
+.selectOption-appear {
+  height: 0;
+  opacity: 0;
+}
+
+.selectOption-enter-active,
+.selectOption-appear-active {
+  height: 100%;
+  opacity: 1;
+  transition: $select-transition;
+}
+
+.selectOption-exit {
+  height: 100%;
+  opacity: 1;
+}
+
+.selectOption-exit-active {
+  height: 0;
+  opacity: 0;
+  transition: $select-transition;
+}

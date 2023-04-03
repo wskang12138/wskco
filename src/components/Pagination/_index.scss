@@ -1,0 +1,117 @@
+.pagination {
+  display: flex;
+  gap: $translate-xs;
+  height: $height-base;
+
+  &-prev,
+  &-next,
+  &-numberBox,
+  &-pageSizeSelect {
+    min-width: $pagination-numbox-width;
+    font-size: $font-size-base;
+    background: $white;
+    border: $border-width solid $border-color;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $font-color;
+  }
+
+  &-numberBox:hover {
+    border-color: $hover-color;
+    cursor: pointer;
+  }
+
+  &-disabled {
+    color: $disabled-selected-color;
+    cursor: not-allowed;
+  }
+
+  &-actived {
+    color: $hover-color;
+    border-color: $hover-color;
+    font-weight: bold;
+  }
+
+  &-pageSizeSelect {
+    min-width: $pagination-select-width;
+    margin-left: $translate-ms;
+
+    .size {
+      margin-right: $translate-xs;
+    }
+
+    .options {
+      position: relative;
+      top: $translate-xs;
+      display: flex;
+      flex-direction: column;
+      width: $pagination-select-width;
+      box-shadow: $pagination-box-shadow;
+      transition: 0.2s linear;
+
+      .option {
+        font-size: $font-size-base;
+        text-align: center;
+
+        &:hover {
+          color: $hover-color;
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $hover-color;
+    }
+  }
+
+  &-jumpBox {
+    margin-left: $translate-xs;
+    display: flex;
+    align-items: center;
+
+    &-jump {
+      width: 68px;
+      height: $height-sm;
+      margin: 0 $translate-xs;
+      border: $border-width solid $border-color;
+      border-radius: $border-radius-sm;
+      outline: none;
+      transition: 0.2s linear;
+
+      &:hover,
+      &:active {
+        border-color: $hover-color;
+      }
+
+    }
+  }
+
+
+  &-prev:hover,
+  &-next:hover {
+    color: $hover-color;
+    border-color: $hover-color;
+  }
+}
+
+
+.dark-pagination {
+
+  .dark-pagination-numberBox,
+  .dark-pagination-next,
+  .dark-pagination-prev {
+    background-color: transparent;
+    color: #f00;
+  }
+
+  .dark-pagination-jumpBox input {
+    color: $primary;
+    background-color: $gray-800;
+    outline: none;
+  }
+
+}

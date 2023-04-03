@@ -1,0 +1,31 @@
+@import "./styles/variables";
+@import "./styles/reboot";
+@import "./styles/mixin";
+@import "./styles/animation";
+
+//基础
+@import "./components/Button/index";
+@import "./components/Divider/index";
+@import "./components/Space/index";
+@import "./components/Layout/index";
+@import "./components/Layout/Content/index";
+@import "./components/Layout/Slider/index";
+@import "./components/Layout/Header/index";
+@import "./components/Layout/Footer/index";
+@import "./components/Alert/index";
+@import "./components/Message/index";
+@import "./components/Skeleton/index";
+@import "./components/Menu/index";
+@import "./components/Select/index";
+@import "./components/Pagination/index";
+
+//功能
+@import "./feat-components/FPS/index";
+
+//动画
+@import "./animate-component/AnimateLineSimpleText/index";
+@import "./animate-component/AnimateLineText/index";
+@import "./animate-component/BreakText/index";
+@import './animate-component/NumberCount3D/index';
+@import './animate-component/OutlineAnimation/index';
+@import './animate-component/StringRain/index';

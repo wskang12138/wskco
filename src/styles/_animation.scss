@@ -1,0 +1,25 @@
+// 动画
+@include zoom-animation('top', scaleY(0), scaleY(1), center top);
+@include zoom-animation('left', scale(.45, .45), scale(1, 1), top left);
+@include zoom-animation('right', scale(.45, .45), scale(1, 1), top right);
+@include zoom-animation('bottom', scaleY(0), scaleY(1), center bottom);
+
+// 过渡时间
+$transition-duration-1: .1s;
+$transition-duration-2: 0.2s;
+$transition-duration-3: 0.3s;
+$transition-duration-4: 0.4s;
+$transition-duration-5: 0.5s;
+$transition-duration-loading: 1s;
+
+// 过渡曲线
+// 线性
+$transition-timing-function-linear: cubic-bezier(0, 0, 1, 1);
+// 标准
+$transition-timing-function-standard: cubic-bezier(0.34, 0.69, 0.1, 1);
+// 过冲
+$transition-timing-function-overshoot: cubic-bezier(0.3, 1.3, 0.3, 1);
+// 减速
+$transition-timing-function-decelerate: cubic-bezier(0.4, 0.8, 0.74, 1);
+// 加速
+$transition-timing-function-accelerate: cubic-bezier(0.26, 0, 0.6, 0.2);

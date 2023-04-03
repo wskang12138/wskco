@@ -1,0 +1,38 @@
+
+.message-container,
+.dark-message-container {
+  position: fixed;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0 20px;
+  color: #000;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
+  transform: translate(-50%, 0);
+  opacity: 1;
+  animation: show-message 0.3s;
+
+  .toast-content {
+    margin: 0 10px;
+  }
+}
+@keyframes show-message {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.dark-message-container {
+  color: #ffffffe6;
+  background-color: #000;
+  border: 1px solid #939393;
+}

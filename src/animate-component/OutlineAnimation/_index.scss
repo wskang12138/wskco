@@ -1,0 +1,23 @@
+.wskco-outline-animation {
+  position: relative;
+
+  &__svg {
+    position: absolute;
+  }
+
+  &__shape {
+    fill: transparent;
+  }
+
+  &:hover &__shape {
+    -webkit-animation: wskco-draw 1s ease-in-out forwards;
+    animation: wskco-draw 1s ease-in-out forwards;
+  }
+}
+
+@keyframes wskco-draw {
+  to {
+    stroke-dasharray: 1000 0;
+    stroke-dashoffset: 0;
+  }
+}

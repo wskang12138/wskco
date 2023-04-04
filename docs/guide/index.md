@@ -32,8 +32,6 @@ wsk这是我名字的缩写,co 为component ,然后就是我的代码component �
 
 ## About Me
 
-- [Github]()
+- [Github](https://github.com/wskang12138)
 
-- [csdn]()：学习笔记 📝
-
-- [Interest]()：记录每一个有趣的应用示例 💪
+- [csdn](https://blog.csdn.net/nihaio25?spm=1000.2115.3001.5343)：学习笔记 📝

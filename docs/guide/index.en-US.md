@@ -33,8 +33,7 @@ Welcome to join or provide comments. This project will be updated for a long tim
 
 ## About Me
 
-- [Github](https://github.com/RyanProMax)
+- [Github](https://github.com/wskang12138)
 
-- [csdn](https://www.yuque.com/ryan.zhang)：学习笔记 📝
+- [csdn](https://blog.csdn.net/nihaio25?spm=1000.2115.3001.5343)：学习笔记 📝
 
-- [Interest](https://RyanProMax.github.io/interest/)：记录每一个有趣的应用示例 💪

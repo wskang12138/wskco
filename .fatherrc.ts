@@ -1,5 +1,4 @@
 export default {
-  cssModules: false,
   target: 'browser',
   entry: 'src/index.ts',
   //   esm: {},

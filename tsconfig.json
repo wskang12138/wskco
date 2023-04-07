@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es6",
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
@@ -19,7 +19,7 @@
     },
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx","typings.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "typings.d.ts"],
   "exclude": [
     "node_modules",
     "lib",

@@ -1,8 +1,9 @@
 export default {
+  cssModules: false,
   target: 'browser',
   entry: 'src/index.ts',
-  esm: 'babel',
-  cjs: 'babel',
+  //   esm: {},
+  //   cjs: {},
   autoprefixer: {
     browsers: ['ie>9', 'Safari >= 6'],
   },

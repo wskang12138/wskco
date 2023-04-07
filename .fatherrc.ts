@@ -1,9 +1,6 @@
-export default {
-  target: 'browser',
-  entry: 'src/index.ts',
-  //   esm: {},
-  //   cjs: {},
-  autoprefixer: {
-    browsers: ['ie>9', 'Safari >= 6'],
-  },
-};
+import { defineConfig } from 'father';
+
+export default defineConfig({
+  // more father config: https://github.com/umijs/father/blob/master/docs/config.md
+  esm: { output: 'dist' }, //输出路径
+});

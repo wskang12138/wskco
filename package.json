@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "wskco",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -14,13 +14,15 @@
     "prepublishOnly": "npm run build"
   },
   "files": [
-    "dist"
+    "docs-dist",
+    "es"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/wskang12138/wskco",
     "branch": "master"
   },
+  "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
   "gitHooks": {

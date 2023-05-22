@@ -1,13 +1,14 @@
 import { Button } from 'wskco';
 import React from 'react';
 import * as XLSX from 'xlsx';
-import {BaseDownloadProps} from './interface'
+import { BaseDownloadProps } from './interface';
 
 type NativeDownloadProps = BaseDownloadProps;
 
 export async function downloadFileToLocal(param: BaseDownloadProps) {
   const { fileName, downloadType, content = '', xlsxType } = param;
   const contentType = Object.prototype.toString.call(content)?.slice(8, -1);
+
   switch (downloadType) {
     case 'xlsx':
       if (contentType === 'String') {

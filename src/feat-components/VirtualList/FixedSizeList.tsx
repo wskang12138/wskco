@@ -1,11 +1,12 @@
-import React, { createElement,  useState } from 'react';
-import { FixedSizeListProps } from './interface'
+import React, { createElement, useState } from 'react';
+import { FixedSizeListProps } from './interface';
+
 const FixedSizeList: React.FC<FixedSizeListProps> | null = ({
   children,
   width,
   height,
   itemCount,
-  itemSize
+  itemSize,
 }) => {
   if (!height || !itemCount || !itemSize || typeof children !== 'function') {
     console.error('请按要求设置属性');
@@ -27,7 +28,7 @@ const FixedSizeList: React.FC<FixedSizeListProps> | null = ({
   const getItemStyle = () => {
     return {
       height: itemSize,
-      width: '100%'
+      width: '100%',
     };
   };
 
@@ -47,8 +48,8 @@ const FixedSizeList: React.FC<FixedSizeListProps> | null = ({
         createElement(children, {
           index,
           style: getItemStyle(),
-          key: index
-        })
+          key: index,
+        }),
       );
     }
     return items;
@@ -61,7 +62,7 @@ const FixedSizeList: React.FC<FixedSizeListProps> | null = ({
         overflow: 'auto',
         willChange: 'transform',
         width,
-        height
+        height,
       }}
       onScroll={onScroll}
     >
@@ -72,7 +73,7 @@ const FixedSizeList: React.FC<FixedSizeListProps> | null = ({
           top: 0,
           left: 0,
           right: 0,
-          transform: `translateY(${startOffset}px)`
+          transform: `translateY(${startOffset}px)`,
         }}
       >
         {render()}

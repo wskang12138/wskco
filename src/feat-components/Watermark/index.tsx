@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { WatermarkProps } from './interface'
+import { WatermarkProps } from './interface';
+
 const Watermark: React.FC<WatermarkProps> = ({
   url,
   className,

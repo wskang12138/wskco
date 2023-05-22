@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import './index.css';
-import {TMenuItem,IRightMenu } from './interface'
+import { TMenuItem, IRightMenu } from './interface';
+
 export default function RightMenu(props: IRightMenu) {
   const {
     visibility,

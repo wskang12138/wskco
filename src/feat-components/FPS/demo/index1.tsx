@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { FPS,Button } from 'wskco';
+import { FPS, Button } from 'wskco';
 
 export default () => {
   const prev = useRef(0);

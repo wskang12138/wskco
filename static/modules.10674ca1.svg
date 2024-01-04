@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="模块管理" transform="translate(-135 -354)">
+    <path id="矩形_7163" data-name="矩形 7163" d="M0,0H15a3,3,0,0,1,3,3V15a3,3,0,0,1-3,3H3a3,3,0,0,1-3-3V0A0,0,0,0,1,0,0Z" transform="translate(141 360)" fill="#fff" opacity="0.12"/>
+    <path id="减去_3" data-name="减去 3" d="M-4000,11h-5a3,3,0,0,1-3-3V0h8a3,3,0,0,1,3,3V8A3,3,0,0,1-4000,11Zm-6-9V7a2,2,0,0,0,2,2h3a2,2,0,0,0,2-2V4a2,2,0,0,0-2-2Z" transform="translate(4143 354)" fill="#fff"/>
+    <path id="减去_7" data-name="减去 7" d="M8,11H0V3A3,3,0,0,1,3,0H8a3,3,0,0,1,3,3V8A3,3,0,0,1,8,11ZM4,2A2,2,0,0,0,2,4V9H7A2,2,0,0,0,9,7V4A2,2,0,0,0,7,2Z" transform="translate(135 367)" fill="#fff"/>
+    <path id="减去_8" data-name="减去 8" d="M8,11H0V3A3,3,0,0,1,3,0H8a3,3,0,0,1,3,3V8A3,3,0,0,1,8,11ZM4,2A2,2,0,0,0,2,4V9H7A2,2,0,0,0,9,7V4A2,2,0,0,0,7,2Z" transform="translate(159 365) rotate(180)" fill="#fff"/>
+    <path id="减去_9" data-name="减去 9" d="M8,11H3A3,3,0,0,1,0,8V0H8a3,3,0,0,1,3,3V8A3,3,0,0,1,8,11ZM2,2V7A2,2,0,0,0,4,9H7A2,2,0,0,0,9,7V4A2,2,0,0,0,7,2Z" transform="translate(159 378) rotate(180)" fill="#fff"/>
+  </g>
+</svg>

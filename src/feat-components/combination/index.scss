@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+
+  .root__icon {
+    mask-repeat: no-repeat;
+    mask-position: center center;
+  }
+
+  .root__text {
+    height: 20px;
+    margin-left: 3px;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+}

@@ -21,7 +21,7 @@
 
 //功能
 @import "./feat-components/FPS/index";
-
+@import './feat-components/FloatBubble/index';
 //动画
 @import "./animate-component/AnimateLineSimpleText/index";
 @import "./animate-component/AnimateLineText/index";
@@ -29,3 +29,4 @@
 @import './animate-component/NumberCount3D/index';
 @import './animate-component/OutlineAnimation/index';
 @import './animate-component/StringRain/index';
+
